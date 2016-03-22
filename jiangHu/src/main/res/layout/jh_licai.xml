@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context="com.sptech.qujj.activity.LiCaiActivity">
+    
+    <com.sptech.qujj.view.TitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+    </com.sptech.qujj.view.TitleBar>
+    
+    <LinearLayout 
+        android:id="@+id/linear_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_below="@+id/titleBar"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal" >
+        
+        <Button android:id="@+id/btn_tuijian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="推荐产品"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:background="@drawable/btn_options_leftselect"/>
+        <Button android:id="@+id/btn_mine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="我的产品"
+            android:textColor="@color/main_color"
+            android:textSize="20sp"
+            android:background="@drawable/btn_options_rightunselect"/>
+    </LinearLayout>
+       
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/linear_button"
+        android:background="@color/background_color"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" />
+</RelativeLayout>

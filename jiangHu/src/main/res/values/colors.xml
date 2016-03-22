@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#ffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="slide_bg">#4a5262</color> <!-- 侧栏的背景颜色 -->
+    <color name="text_slide">#8a94a8</color> <!-- 侧栏的文字颜色 -->
+    <color name="lv_select">#f6f6f6</color> <!-- listView 选中颜色 -->
+    <color name="gray_line">#cdcdcd</color> <!-- 灰色的线 -->
+
+
+    <!-- 江湖救急 颜色 -->
+    <color name="text_main">#333333</color> <!-- 主要文字颜色 -->
+    <color name="text_assist">#737373</color> <!-- 辅助文字颜色 -->
+    <color name="text_hint">#aaaaaa</color> <!-- 提示文字颜色 -->
+    <color name="background_color">#ebebeb</color> <!-- 背景色 -->
+
+    <color name="main_color">#e9502d</color> <!-- app 主色（titlebar 部分文字） -->
+    <color name="text_warning">#cb0000</color> <!-- 警示性文字 -->
+    <color name="text_somehint">#9d2004</color> <!-- 少数提示文字颜色 -->
+    <color name="text_red">#FF0000</color>
+    <color name="text_blue">#21a2fd</color> <!-- 少数强调突出文字颜色 -->
+     <color name="text_green">#50b400</color> <!-- 颜色 -->
+    <color name="background_prodetail">#e14825</color>
+
+    <!-- 半透明黑 -->
+    <color name="background_tou">#50000000</color>
+    <color name="dark_slate_gray">#2F4F4F</color>
+    <color name="gray_1">#C0C0C0</color>
+    <color name="gray_2">#AFAFAF</color>
+    <color name="background_person_gary">#f2f2f2</color>
+
+</resources>

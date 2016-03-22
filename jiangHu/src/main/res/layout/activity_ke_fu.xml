@@ -1,0 +1,88 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+	
+    <com.sptech.qujj.view.TitleBar 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/titleBar"/>
+        
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="100"/>
+    
+    <ImageView 
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="217"
+        android:src="@drawable/img_service"/>
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="68"
+        android:orientation="horizontal"
+        android:gravity="center">
+    
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="微信客服专属："
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textColor="@color/text_hint"
+        />
+    
+    <TextView 
+        android:id="@+id/tv_weixin_name"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textColor="@color/text_red"
+        android:gravity="center"
+        android:textSize="16sp"
+        />
+    
+    </LinearLayout>
+    
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="40"/>
+    
+    <TextView 
+        android:textColor="@color/text_main"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="120"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:textSize="16sp"
+        android:text="打开微信>添加好友，马上可以享受专属客服一对一的VIP客服服务。支持业务咨询，申请审核，理财到账，优惠活动等随时掌握。"
+        />
+    
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="40"/>
+    
+    <Button 
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="80"
+        android:text="打开微信，添加好友"
+        android:onClick="goToWeiXin"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+            android:background="@drawable/jh_licai_detailinfo_buy_selector"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="240"/>
+
+</LinearLayout>

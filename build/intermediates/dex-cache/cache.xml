@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="D:\JiangHu3\jiangHu\build\intermediates\incremental-classes\debug\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="1c08d2447b9fd4d4cd633d9480237eece021a747">
+        <dex dex="D:\JiangHu3\jiangHu\build\intermediates\pre-dexed\debug\classes_d981e284081c92130b9374ed6223198603d3bd2f.jar" />
+    </item>
+
+</items>

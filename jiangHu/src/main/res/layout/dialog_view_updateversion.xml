@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <!-- 注册成功 弹出框  -->
+ 
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="5dp"
+            android:paddingBottom="20dp"
+            android:background="@drawable/bg_shape"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/linear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp" >
+
+                <TextView
+                    android:id="@+id/dialog_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:text="版本更新"
+                    android:textColor="@color/main_color"
+                    android:textSize="20dp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/dialog_line"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/linear"
+                android:layout_margin="10dp"
+                android:background="@color/gray_1" />
+
+            <ImageView
+                android:id="@+id/img_popup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dialog_line"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/img_popup_update" />
+
+            <TextView
+                android:id="@+id/tv_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_popup"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="检测到趣救急有新版本更新！升级体验更流畅。"
+                android:textColor="@color/text_main"
+                android:textSize="15dp" />
+
+            <RelativeLayout 
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp" 
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@id/tv_hint"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                >
+            <Button
+                android:id="@+id/dialog_im_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/jh_dialog_left_selector"
+                android:text="取消"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/main_color"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/dialog_im_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/dialog_im_left"
+                android:layout_toRightOf="@id/dialog_im_left"
+                android:background="@drawable/jh_dialog_right_selector"
+                android:text="去更新"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/im_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="6dp"
+                android:background="@drawable/btn_popup_close_unselect" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

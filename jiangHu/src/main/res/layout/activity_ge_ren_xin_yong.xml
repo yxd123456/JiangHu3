@@ -1,0 +1,250 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.sptech.qujj.view.TitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/titleBar"/>
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="200"
+        android:background="#aa1111"
+        android:orientation="horizontal">     
+        
+        <LinearLayout 
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+        
+        <com.sptech.qujj.view.CircleImageView
+            android:layout_gravity="center"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="#00ff55"
+            android:layout_toRightOf="@+id/tv"         
+            android:id="@+id/civ1"/>
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="个人信息"
+            android:textSize="16sp"
+            android:textColor="#ffffff"
+            android:layout_below="@+id/civ1"
+            android:layout_alignLeft="@+id/civ1"
+            android:gravity="center"
+            android:layout_marginTop="5dp"/>
+        
+        </LinearLayout>
+        
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@color/gray_line"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="25dp"/>
+        
+        
+        <LinearLayout 
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+        <com.sptech.qujj.view.CircleImageView
+            android:layout_gravity="center"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="#00ff55"
+            android:layout_toRightOf="@+id/tv"         
+            android:id="@+id/civ2"/>
+        
+         <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="信用资料"
+            android:textSize="16sp"
+            android:textColor="#ffffff"
+			android:layout_marginTop="5dp"
+            android:gravity="center"/>
+         
+         </LinearLayout>
+        
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="90">         
+        
+        <TextView 
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="职业"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="@color/text_main"/>
+        
+        <Spinner 
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="match_parent"
+            android:spinnerMode="dropdown"
+            android:id="@+id/spinner_zhiye"
+            android:background="@null"/>
+        
+    </LinearLayout>
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_line"/>
+    
+     <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="90">
+         
+         
+        
+        <TextView 
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="收入"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="@color/text_main"/>
+        
+        <Spinner 
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="match_parent"
+            android:spinnerMode="dropdown"
+            android:id="@+id/spinner_shouru"
+            android:background="@null"/>
+        
+    </LinearLayout>
+    
+  <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_line"/>
+    
+     <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="90">              
+        
+        <TextView 
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="  教育程度"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="@color/text_main"/>
+        
+        <Spinner 
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="match_parent"
+            android:spinnerMode="dropdown"
+            android:id="@+id/spinner_jiaoyu"
+            android:background="@null"/>
+        
+    </LinearLayout>
+    
+   <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_line"/>
+    
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="  毕业证书"
+        android:textColor="@color/text_main"
+        android:textSize="16sp"
+        android:gravity="left"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="320">
+        
+        <TextView 
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.15"/>
+        
+        <ImageView 
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_launcher"
+            android:id="@+id/img_byzs"/>
+        
+        <TextView
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="毕业证内页照\n点击例图上传/更改"
+            android:textSize="14dp"
+            android:textColor="#aa0011"
+            android:gravity="center"/>
+        
+        <TextView 
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.15"/>
+        
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="223"
+        android:background="@color/background_color"
+        android:orientation="vertical">
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="注：·我声明以上信息为本人真实信息"
+            android:textSize="12sp"
+            android:textColor="#223322"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            />
+    
+	    <Button 
+	         android:id="@+id/btn_next"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="bottom"
+	            android:layout_marginLeft="10dp"
+	            android:layout_marginRight="10dp"
+	            android:background="@drawable/jh_licai_detailinfo_buy_selector"
+	            android:text="提交"
+	            android:layout_marginTop="10dp"
+	            android:textColor="@color/white"
+	            android:textSize="20sp"/>
+    
+    </LinearLayout>
+
+</LinearLayout>

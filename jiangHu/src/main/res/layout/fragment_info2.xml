@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+      
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"      
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+        
+       
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             >
+             
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bg_information_addressbook" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="70dp"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="社交圈子"
+                        android:textColor="#ffffff"
+                        android:textSize="25sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_check"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/img_state_information_finished"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:text="    完善信息可以提高\n申请通过率和申请次数。"
+                    android:textSize="16sp"
+                    android:textColor="#ffffff" />
+
+                <Button
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/btn_complete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ye_btn_information"
+                    android:text="导入通讯录"
+                    android:textColor="#0A457D"
+                    android:textSize="21sp" 
+                    android:clickable="false"/>
+            </LinearLayout>
+
+            
+
+            <ImageView
+                android:id="@+id/iv_complete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:src="@drawable/img_label_information_notperfect" />
+        </FrameLayout>
+	
+	 <TextView 
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>	
+	
+	<LinearLayout 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="10dp"
+	    android:layout_marginLeft="50dp">
+	
+		<TextView 
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:textColor="@color/text_main"
+		    android:text="趣救急确保信息安全"/>
+		
+		<TextView 
+		    android:id="@+id/tv_nda"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="《保密协议》"
+		    android:textColor="#0000ff"
+		    />
+		
+	
+	</LinearLayout>
+    
+</LinearLayout>
+</LinearLayout>

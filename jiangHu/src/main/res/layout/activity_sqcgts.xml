@@ -1,0 +1,63 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+   <com.sptech.qujj.view.TitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/titleBar"/>
+   
+   <ImageView 
+       android:layout_width="match_parent"
+       android:layout_height="250dp"
+       android:src="@drawable/ic_launcher"/>
+   
+   <LinearLayout 
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:gravity="center">
+   
+   <TextView 
+       android:id="@+id/daojishi"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="10秒之后，页面将自动"/>
+   
+   <TextView 
+       android:id="@+id/back_to_first"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="回到首页"
+       android:layout_marginLeft="15dp"
+       android:textColor="#ff0000"
+       
+       />
+   
+   </LinearLayout>
+   
+   <TextView 
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="您的中国银行信用卡（4521）卡申请8550.02元，审核将在2-3个工作日内完成，请随时查看进度中心审核进度"/>
+   
+    <Button 
+	         android:id="@+id/btn_jindu"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@+id/btn_commit"
+	            android:layout_centerHorizontal="true"
+	            android:layout_marginLeft="10dp"
+	            android:layout_marginRight="10dp"
+	            android:layout_marginTop="50dp"
+	            android:background="@drawable/jh_licai_detailinfo_buy_selector"
+	            android:textColor="@color/white"
+	            android:textSize="20sp"
+	            android:layout_marginBottom="20dp"
+	            android:onClick="check"
+	            android:text="查看进度"/>
+   
+   
+
+</LinearLayout>

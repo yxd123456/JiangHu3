@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="5dp"
+            android:paddingBottom="20dp"
+            android:background="@drawable/bg_shape" 
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/linear" 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp" >
+
+                <TextView
+                    android:id="@+id/dialog_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:text="请设置交易密码"
+                    android:textColor="@color/main_color"
+                    android:textSize="20dp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/dialog_line"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/linear"
+                android:layout_margin="10dp"
+                android:background="@color/gray_1" />
+
+            <TextView
+                android:id="@+id/tv_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dialog_line"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="为了保证你的账户资金安全，请勿与登录密码相同。"
+                android:textColor="@color/text_main"
+                android:textSize="15dp" />
+
+            <LinearLayout
+                android:id="@+id/ll_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_hint"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_signup_inputbox"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/ic_password" />
+
+                <EditText
+                    android:id="@+id/et_setdealpwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:maxLength="16"
+                    android:hint="交易密码由6-16位数字/字母,建议组合使用"
+                    android:textSize="13sp"
+                    android:singleLine="true"
+                      android:textCursorDrawable="@drawable/edittext_cursor_color"
+                    android:password="true" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/dialog_im_right"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_below="@+id/ll_password"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/jh_licai_detailinfo_buy_selector"
+                android:text="确定"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+        </RelativeLayout>
+        
+        <ImageView
+                android:id="@+id/im_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="10dp"
+                android:background="@drawable/btn_popup_close_unselect" />
+    </RelativeLayout>
+
+</RelativeLayout>

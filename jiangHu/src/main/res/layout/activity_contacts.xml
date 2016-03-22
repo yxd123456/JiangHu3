@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <com.sptech.qujj.view.TitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/contacts_titleBar"/>
+        
+    <ImageView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/img_addressbook"
+        android:layout_marginTop="40dp"
+        />
+    
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="未授权通讯录"
+        android:gravity="center"
+        android:layout_marginTop="70dp"/>
+    
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="开启授权，导入成功后，获取更多申请次数"
+        android:textColor="#666666"
+        android:gravity="center"/>
+    
+	<Button 
+	     android:id="@+id/btn_next"
+	     android:layout_gravity="center_horizontal"
+			android:layout_width="wrap_content"
+            android:layout_height="wrap_content"          
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/jh_licai_detailinfo_buy_selector"
+            android:text="开启通讯录"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:onClick="daoru"/>
+    
+</LinearLayout>

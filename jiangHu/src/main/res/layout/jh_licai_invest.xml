@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color" >
+
+    <!-- 投资 -->
+
+    <com.sptech.qujj.view.TitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+    </com.sptech.qujj.view.TitleBar>
+
+    <RelativeLayout
+        android:id="@+id/rela_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleBar"
+        android:background="@color/white" >
+
+        <RelativeLayout
+            android:id="@+id/linear_top"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:background="@color/white"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <TextView
+                android:id="@+id/tv_proname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/text_main"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img_line"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/img_line_grey" />
+        </RelativeLayout>
+
+        <!-- 产品info -->
+
+        <RelativeLayout
+            android:id="@+id/rela_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear_top"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_yearvalue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/main_color"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:id="@+id/tv_year"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/tv_yearvalue"
+                        android:layout_toRightOf="@+id/tv_yearvalue"
+                        android:text="年化收益率"
+                        android:textColor="@color/text_assist"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_datevalue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/main_color"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:id="@+id/tv_datetype"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/tv_datevalue"
+                        android:layout_toRightOf="@+id/tv_datevalue"
+                        android:textColor="@color/main_color"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/tv_datetype"
+                        android:layout_toRightOf="@+id/tv_datetype"
+                        android:text="期限"
+                        android:textColor="@color/text_assist"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!-- 水平进度条 -->
+
+        <com.sptech.qujj.view.SpringProgressView
+            android:id="@+id/spring_progress_view"
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:layout_below="@+id/rela_info"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp" />
+
+        <RelativeLayout
+            android:id="@+id/rela_yishou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spring_progress_view"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp" >
+
+            <TextView
+                android:id="@+id/tv_prostate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="已出售"
+                android:textColor="@color/text_main"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_persent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/tv_prostate"
+                android:textColor="@color/text_blue"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rela_way"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rela_yishou"
+            android:layout_margin="10dp" >
+
+            <TextView
+                android:id="@+id/tv_way"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="获取收益方式：一次性还本付息"
+                android:textColor="@color/text_assist"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <!--
+             <View
+            android:id="@+id/linear_line"
+            android:layout_width="fill_parent"
+            android:layout_height="10dp"
+            android:layout_below="@+id/rela_way"
+            android:background="@drawable/jh_topbottom_line_gray"
+            android:orientation="horizontal" >
+        </View>
+        -->
+
+        <RelativeLayout
+            android:id="@+id/rela_shengyu"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/rela_way"
+            android:background="@drawable/jh_topbottom_line_gray"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <TextView
+                android:id="@+id/tv_shengyu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="剩余金额：5000 元"
+                android:textColor="@color/text_main"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <!-- 投资金额 -->
+
+        <RelativeLayout
+            android:id="@+id/rela_touzi"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/rela_shengyu"
+            android:background="@drawable/jh_bottom_line_white"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <TextView
+                android:id="@+id/tv_touzijine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="投资金额"
+                android:textColor="@color/text_main"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/ed_money"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/tv_touzijine"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textColorHint="@color/text_hint"
+                android:textCursorDrawable="@drawable/edittext_cursor_color"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:adjustViewBounds="true"
+                android:maxHeight="27dp"
+                android:maxWidth="27dp"
+                android:src="@drawable/jh_input_clear_selector"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rela_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rela_top"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp" >
+
+        <TextView
+            android:id="@+id/tv_benzhu"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/text_assist"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_benzhumoney"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_benzhu"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/text_assist"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btn_buy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_benzhumoney"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/jh_licai_detailinfo_buy_selector"
+            android:text="立即购买"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,75 @@
+package com.sptech.qujj.basic;
+
+import android.app.Activity;
+import android.app.ActivityManager;
+import android.os.Bundle;
+import android.util.Log;
+
+import com.umeng.analytics.MobclickAgent;
+
+//import com.umeng.analytics.MobclickAgent;
+
+public class BaseActivity extends Activity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		ActivityCollect.add(this);
+		//获取当前类名
+		Log.e("shuangpeng", this.getClass().getName());
+	}
+
+	@Override
+	protected void onStart() {
+		super.onStart();
+	}
+
+	@Override
+	protected void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+		MobclickAgent.onResume(this);
+	}
+
+	@Override
+	protected void onPause() {
+		// TODO Auto-generated method stub
+		super.onPause();
+		MobclickAgent.onPause(this);
+	}
+
+	@Override
+	protected void onRestart() {
+		super.onRestart();
+	}
+
+	@Override
+	protected void onStop() {
+		super.onStop();
+	}
+
+	@Override
+	protected void onDestroy() {
+		ActivityCollect.remove(this);
+		super.onDestroy();
+	}
+
+	// 在整个程序关闭的时候关闭所有的activity，不关掉的话只能等系统自动回收
+	public void closeActivity() {
+		float version;
+		version = Float.parseFloat(android.os.Build.VERSION.RELEASE.substring(0, 3));
+
+		System.out.println("version==" + version);
+		if (version > 2.1) {
+			for (int i = 0; i < ActivityCollect.list.size(); i++) {
+				if (ActivityCollect.list.get(i) != null)
+					((Activity) ActivityCollect.list.get(i)).finish();
+			}
+		} else {
+			ActivityManager actMgr = (ActivityManager) BaseActivity.this.getSystemService(ACTIVITY_SERVICE);
+			actMgr.restartPackage(getPackageName());
+		}
+		finish();
+	}
+
+}

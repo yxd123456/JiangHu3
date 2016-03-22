@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color" >
+
+    <!-- 账户提现 -->
+
+    <com.sptech.qujj.view.TitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+    </com.sptech.qujj.view.TitleBar>
+
+    <RelativeLayout
+        android:id="@+id/rela_card"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleBar"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/jh_topbottom_line_white"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp" >
+
+        <ImageView
+            android:id="@+id/img_card"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true" />
+
+        <LinearLayout
+            android:id="@+id/linear_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/img_card"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_bank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_main"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:id="@+id/rela_cardinfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tv_realname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/text_assist"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_cardno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/tv_realname"
+                    android:textColor="@color/text_assist"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/img_cardtype"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/tv_cardno"
+                    android:background="@drawable/jh_licai_bank" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/rb_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/jh_rightbtn_selector" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rela_tixian"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/rela_card"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/jh_topbottom_line_white"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <TextView
+            android:id="@+id/tv_touzijine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="提取金额"
+            android:textColor="@color/text_main"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/ed_money"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/tv_touzijine"
+            android:background="@null"
+            android:inputType="numberDecimal"
+            android:maxLength="10"
+            android:singleLine="true"
+            android:textColorHint="@color/text_hint"
+            android:textCursorDrawable="@drawable/edittext_cursor_color"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/img_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            android:maxHeight="27dp"
+            android:maxWidth="27dp"
+            android:src="@drawable/jh_input_clear_selector"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rela_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rela_tixian"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp" >
+
+        <TextView
+            android:id="@+id/tv_tixing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_assist"
+            android:textSize="12sp"
+            android:text="100元以下需一次性提完"
+            />
+
+        <TextView
+            android:id="@+id/tv_daozhang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/tv_tixing"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_assist"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_daozhang"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/jh_licai_detailinfo_buy_selector"
+            android:text="下一步"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_beizhu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_next"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="20dp"
+            android:lineSpacingExtra="5dp"
+            android:text="注：为顺应国家对于互联网金融行业的政策，保护您的资金安全，您在平台上的资金交易均需要关联银行卡遵循“原卡进原卡出”的原则。"
+            android:textColor="@color/text_assist"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

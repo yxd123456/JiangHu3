@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:layout_width="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_lengmoneytoyou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:textColor="@color/text_assist"
+            android:text="借你钱借款成功" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_time_sendmoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:text="打款时间  :"
+                android:textColor="@color/text_assist" />
+
+            <TextView
+                android:id="@+id/tv_sendmoney_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:text="2016-03-07"
+                android:textColor="@color/text_assist" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_detail_loadmoney"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:drawableRight="@drawable/btn_right_click_selected"
+        android:gravity="center"
+        android:textColor="@color/text_assist"
+        android:text="120.00" />
+
+</LinearLayout>

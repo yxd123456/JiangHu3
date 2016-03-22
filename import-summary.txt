@@ -1,0 +1,149 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Manifest Merging:
+-----------------
+Your project uses libraries that provide manifests, and your Eclipse
+project did not explicitly turn on manifest merging. In Android Gradle
+projects, manifests are always merged (meaning that contents from your
+libraries' manifests will be merged into the app manifest. If you had
+manually copied contents from library manifests into your app manifest
+you may need to remove these for the app to build correctly.
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+From JiangHu:
+* AndroidManifest.xml.mine
+* AndroidManifest.xml.r4659
+* AndroidManifest.xml.r4709
+* JiangHu.iml
+* ic_launcher-web.png
+* proguard-project.txt
+From afinal-master:
+* afinal-master.iml
+* ic_launcher-web.png
+* proguard-project.txt
+From android-auto-scroll-view-pager:
+* .gitignore
+* LICENSE
+* README.md
+* pom.xml
+* proguard-project.txt
+From slidelibrary:
+* LICENSE.txt
+* library.iml
+* pom.xml
+* slidelibrary.iml
+
+Replaced Jars with Dependencies:
+--------------------------------
+The importer recognized the following .jar files as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the .jar file in your project was of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the jar replacement in the import wizard and try again:
+
+android-support-v4.jar => com.android.support:support-v4:19.1.0
+android-support-v7-appcompat.jar => com.android.support:appcompat-v7:19.1.0
+gson-2.3.jar => com.google.code.gson:gson:2.3
+
+Potentially Missing Dependency:
+-------------------------------
+When we replaced the following .jar files with a Gradle dependency, we
+inferred the dependency version number from the filename. This
+specific version may not actually be available from the repository.
+If you get a build error stating that the dependency is missing, edit
+the version number to for example "+" to pick up the latest version
+instead. (This may require you to update your code if the library APIs
+have changed.)
+
+gson-2.3.jar => version 2.3 in com.google.code.gson:gson:2.3
+
+Replaced Libraries with Dependencies:
+-------------------------------------
+The importer recognized the following library projects as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the source files in your project were of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the library replacement in the import wizard and try
+again:
+
+android-support-v7-appcompat => [com.android.support:appcompat-v7:19.1.0]
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+In afinal-master:
+* AndroidManifest.xml => afinalmaster\src\main\AndroidManifest.xml
+* assets\ => afinalmaster\src\main\assets
+* lint.xml => afinalmaster\lint.xml
+* res\ => afinalmaster\src\main\res\
+* src\ => afinalmaster\src\main\java\
+In android-auto-scroll-view-pager:
+* AndroidManifest.xml => androidautoscrollviewpager\src\main\AndroidManifest.xml
+* assets\ => androidautoscrollviewpager\src\main\assets
+* res\ => androidautoscrollviewpager\src\main\res
+* src\ => androidautoscrollviewpager\src\main\java\
+In slidelibrary:
+* AndroidManifest.xml => slidelibrary\src\main\AndroidManifest.xml
+* assets\ => slidelibrary\src\main\assets
+* lint.xml => slidelibrary\lint.xml
+* res\ => slidelibrary\src\main\res\
+* src\ => slidelibrary\src\main\java\
+In JiangHu:
+* AndroidManifest.xml => jiangHu\src\main\AndroidManifest.xml
+* assets\ => jiangHu\src\main\assets
+* libs\armeabi-v7a\libBaiduMapSDK_v3_4_0_15.so => jiangHu\src\main\jniLibs\armeabi-v7a\libBaiduMapSDK_v3_4_0_15.so
+* libs\armeabi-v7a\liblocSDK5.so => jiangHu\src\main\jniLibs\armeabi-v7a\liblocSDK5.so
+* libs\armeabi\libBaiduMapSDK_v3_4_0_15.so => jiangHu\src\main\jniLibs\armeabi\libBaiduMapSDK_v3_4_0_15.so
+* libs\armeabi\libgetuiext.so => jiangHu\src\main\jniLibs\armeabi\libgetuiext.so
+* libs\armeabi\liblocSDK5.so => jiangHu\src\main\jniLibs\armeabi\liblocSDK5.so
+* libs\baidumapapi_v3_4_0.jar => jiangHu\libs\baidumapapi_v3_4_0.jar
+* libs\fastjson-1.2.4-sources.jar => jiangHu\libs\fastjson-1.2.4-sources.jar
+* libs\fastjson-1.2.4.jar => jiangHu\libs\fastjson-1.2.4.jar
+* libs\GetuiExt-2.0.3.jar => jiangHu\libs\GetuiExt-2.0.3.jar
+* libs\GetuiSDK2.6.1.0.jar => jiangHu\libs\GetuiSDK2.6.1.0.jar
+* libs\GifView.jar => jiangHu\libs\GifView.jar
+* libs\json_simple-1.1.jar => jiangHu\libs\json_simple-1.1.jar
+* libs\locSDK_5.0.jar => jiangHu\libs\locSDK_5.0.jar
+* libs\SocialSDK_Sina.jar => jiangHu\libs\SocialSDK_Sina.jar
+* libs\SocialSDK_sms.jar => jiangHu\libs\SocialSDK_sms.jar
+* libs\SocialSDK_WeiXin_1.jar => jiangHu\libs\SocialSDK_WeiXin_1.jar
+* libs\SocialSDK_WeiXin_2.jar => jiangHu\libs\SocialSDK_WeiXin_2.jar
+* libs\umeng-analytics-v5.5.3.jar => jiangHu\libs\umeng-analytics-v5.5.3.jar
+* libs\umeng_social_sdk.jar => jiangHu\libs\umeng_social_sdk.jar
+* libs\volley.jar => jiangHu\libs\volley.jar
+* lint.xml => jiangHu\lint.xml
+* res\ => jiangHu\src\main\res\
+* src\ => jiangHu\src\main\java\
+* src\com\sptech\qujj\basic\BaseActivity.java.mine => jiangHu\src\main\resources\com\sptech\qujj\basic\BaseActivity.java.mine
+* src\com\sptech\qujj\basic\BaseActivity.java.r4945 => jiangHu\src\main\resources\com\sptech\qujj\basic\BaseActivity.java.r4945
+* src\com\sptech\qujj\basic\BaseActivity.java.r4988 => jiangHu\src\main\resources\com\sptech\qujj\basic\BaseActivity.java.r4988
+* src\com\sptech\qujj\model\CardInfo.java.mine => jiangHu\src\main\resources\com\sptech\qujj\model\CardInfo.java.mine
+* src\com\sptech\qujj\model\CardInfo.java.r4861 => jiangHu\src\main\resources\com\sptech\qujj\model\CardInfo.java.r4861
+* src\com\sptech\qujj\model\CardInfo.java.r4944 => jiangHu\src\main\resources\com\sptech\qujj\model\CardInfo.java.r4944
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

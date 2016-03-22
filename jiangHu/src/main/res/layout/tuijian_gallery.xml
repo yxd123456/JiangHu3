@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+  <!--  轮播图  -->
+      <RelativeLayout android:id="@+id/relativead"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/banner_height"
+        android:paddingBottom="5dp"
+        android:visibility="gone"
+        >
+        
+        <com.sptech.qujj.view.MyAdGallery
+           android:id="@+id/galleryad" 
+           android:layout_width="fill_parent"  
+           android:layout_height="@dimen/banner_height" />
+
+        <LinearLayout
+            android:id="@+id/adiconlinear"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="horizontal" />
+    </RelativeLayout>
+    
+
+</RelativeLayout>

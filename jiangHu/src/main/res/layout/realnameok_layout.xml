@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_person_gary"
+    android:orientation="vertical" >
+
+    <com.sptech.qujj.view.TitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+    </com.sptech.qujj.view.TitleBar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/img_popup_remind_emil" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="33dp"
+            android:textSize="20sp"
+            android:textColor="@color/text_main"
+            android:text="实名认证完成" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="要代还款？导入账单邮箱后就可以开始啦！" />
+
+        <Button
+            android:id="@+id/btn_importbill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/btn_prodetailinfo_buy_unselect"
+            android:layout_marginTop="50dp"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:text="导入信用卡账单" />
+
+        <Button
+            android:id="@+id/btn_noimportbill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/btn_importbill"
+            android:layout_below="@+id/btn_importbill"
+            android:layout_marginTop="28dp"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/main_color"
+            android:textSize="20sp"
+            android:background="@drawable/licai_tixain_unselect"
+            android:text="下次再说" />
+        
+    </RelativeLayout>
+
+</LinearLayout>

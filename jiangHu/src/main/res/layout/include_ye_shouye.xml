@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/bg_home_background"
+        android:layout_marginTop="99dp"
+        android:orientation="vertical">
+        
+        <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rela_warning"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal" >
+
+	        <RelativeLayout
+	            android:id="@+id/rela_addmailed"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:clickable="true"
+	            android:gravity="center_vertical" >
+	
+	            <ImageView
+	                android:id="@+id/img_handed"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_centerHorizontal="true"
+	                android:background="@drawable/btn_home_pay_selected" />
+	
+	            <TextView
+	                android:id="@+id/tv_addmoreed"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_below="@+id/img_handed"
+	                android:layout_centerHorizontal="true"
+	                android:layout_marginTop="8dp"
+	                android:text="直接还进信用卡"
+	                android:textColor="#666"
+	                android:textSize="10sp" />
+	        </RelativeLayout>
+	
+	        <!--
+	             <ImageView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center_vertical"
+	            android:background="@drawable/im_line_grey" />
+	        -->
+	
+	        <RelativeLayout
+	            android:id="@+id/rela_handapplyed"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:clickable="true"
+	            android:gravity="center_vertical" >
+	
+	            <TextView
+	                android:id="@+id/tv_handapplyed"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_below="@+id/img_addmailed"
+	                android:layout_centerHorizontal="true"
+	                android:layout_marginTop="8dp"
+	                android:text="直接储蓄卡收款"
+	                android:textColor="#666"
+	                android:textSize="10sp" />
+	
+	            <ImageView
+	                android:id="@+id/img_addmailed"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentTop="true"
+	                android:layout_centerHorizontal="true"
+	                android:background="@drawable/btn_home_borrow_selected" />
+	        </RelativeLayout>
+	
+	        <!--
+	             <ImageView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center_vertical"
+	            android:background="@drawable/im_line_grey" />
+	        -->
+	
+	        <RelativeLayout
+	            android:id="@+id/rela_licaied"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:clickable="true"
+	            android:gravity="center_vertical" >
+	
+	            <ImageView
+	                android:id="@+id/img_licaied"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_centerHorizontal="true"
+	                android:background="@drawable/btn_home_finance_selected" />
+	
+	            <TextView
+	                android:id="@+id/tv_licaied"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_below="@+id/img_licaied"
+	                android:layout_centerHorizontal="true"
+	                android:layout_marginTop="8dp"
+	                android:text="余额理财首选"
+	                android:textColor="#666"
+	                android:textSize="10sp" />
+	        </RelativeLayout>
+    </LinearLayout>
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="想借贷更简单"
+        android:textSize="18sp"
+        android:textColor="@color/text_main"
+        android:gravity="center"
+        android:layout_marginTop="10dp"/>
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="完善资料，导入信用卡账单立即开始享受服务"
+        android:textSize="14sp"
+        android:textColor="@color/text_hint"
+        android:gravity="center"
+        android:layout_marginTop="5dp"/>
+    
+    <FrameLayout 
+    	android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+                
+        <android.support.v4.view.ViewPager
+            android:layout_marginTop="10dp"
+			android:layout_width="match_parent"
+			android:layout_height="80dp"
+			android:layout_marginLeft="30dp"
+			android:layout_marginRight="30dp"
+			android:background="@drawable/ye_viewpager_biankuang"
+			android:id="@+id/viewPager"/>
+        
+        <LinearLayout 
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+			android:layout_gravity="bottom"
+			android:layout_marginBottom="10dp"
+		    android:gravity="center">
+	    
+	    <ImageView 
+	        android:id="@+id/p1"
+	        android:layout_width="5dp"
+	        android:layout_height="5dp"	       
+	        android:src="@drawable/indicator_pointer_fg"/>
+	    
+	    <ImageView 
+	        android:id="@+id/p2"
+	        android:layout_width="5dp"
+	        android:layout_height="5dp"
+	        android:layout_marginLeft="5dp"
+	        android:src="@drawable/indicator_pointer_grey"/>
+	    
+	    <ImageView 
+	        android:id="@+id/p3"
+	        android:layout_width="5dp"
+	        android:layout_height="5dp"
+	        android:layout_marginLeft="5dp"
+	        android:src="@drawable/indicator_pointer_grey"/>
+	    
+	</LinearLayout>
+                
+                
+    </FrameLayout>
+        
+    </LinearLayout>
+    
+    <ImageView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/img_home_people"
+        android:layout_gravity="center_horizontal"/>
+
+</FrameLayout>

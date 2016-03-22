@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color">
+    
+     <!-- 账户余额  -->
+     <com.sptech.qujj.view.TitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" > 
+     </com.sptech.qujj.view.TitleBar> 
+    
+    <RelativeLayout 
+        android:id="@+id/rela_balance"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleBar"
+        android:background="@drawable/jh_item_colorchange_selector">
+    
+    <RelativeLayout 
+        android:id="@+id/rela_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp">
+        
+        <ImageView 
+            android:id="@+id/img_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/jh_licai_accountbalance"
+            android:layout_centerVertical="true" />
+        
+        <TextView 
+            android:id="@+id/tv_accountbalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/img_balance"
+            android:layout_centerVertical="true"
+            android:text=" 账户余额（元）"
+            android:textSize="16sp"
+            android:textColor="@color/text_main"
+            />
+        
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/jh_licai_rightbtn" />
+        
+    </RelativeLayout>
+    
+    <TextView 
+            android:id="@+id/tv_balancevalue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@+id/rela_top"
+            android:layout_centerVertical="true"
+            android:textSize="35sp"
+            android:textColor="@color/main_color"
+            />
+    
+    </RelativeLayout>
+    
+     <LinearLayout 
+        android:id="@+id/linear_line"
+        android:layout_width="fill_parent"
+        android:layout_below="@+id/rela_balance"
+        android:layout_height="10dp"
+        android:background="@drawable/jh_topbottom_line_gray"
+        android:orientation="horizontal" >
+    </LinearLayout>
+    
+    <!-- 可用余额  -->
+    <RelativeLayout
+        android:id="@+id/rela_keyong"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/linear_line"
+        android:background="@drawable/jh_bottom_line_white" 
+        >
+
+        <TextView
+            android:id="@+id/tv_touzijine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="可用余额"
+            android:textColor="@color/text_main"
+            android:textSize="16sp" />
+        
+          <TextView
+            android:id="@+id/tv_usermoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:text="0.00"
+            android:textColor="@color/text_assist"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+    
+     <!-- 冻结余额  -->
+     
+     <RelativeLayout
+        android:id="@+id/rela_dongjie"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/rela_keyong"
+        android:background="@drawable/jh_bottom_line_white" 
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="冻结余额"
+            android:textColor="@color/text_main"
+            android:textSize="16sp" />
+        
+        <TextView
+            android:id="@+id/tv_djvalue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:text="0.00"
+            android:textColor="@color/text_assist"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+     
+    
+     <!--  提示信息 -->
+     
+     <RelativeLayout 
+         android:id="@+id/rela_warning"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/rela_dongjie"
+         android:layout_marginTop="10dp"
+         android:layout_marginLeft="10dp"
+         >
+         <ImageView 
+             android:id="@+id/img_warning"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_centerVertical="true"
+             android:background="@drawable/jh_licai_warnig"
+             />
+         
+         <TextView 
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_toRightOf="@+id/img_warning" 
+             android:layout_centerVertical="true"
+             android:textSize="14sp"
+             android:textColor="@color/text_warning"
+             android:text="余额不产生收益，可用于购买理财产品"/>
+         
+     </RelativeLayout>
+     
+     
+     <RelativeLayout 
+         android:id="@+id/rela_btn"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/rela_warning"
+         android:layout_centerHorizontal="true"
+         android:layout_marginTop="30dp" >
+         
+         <Button 
+             android:id="@+id/btn_tixian"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:background="@drawable/jh_licai_tixain_selector"
+             android:text="提现"
+             android:layout_centerVertical="true"
+             android:textColor="@color/main_color"
+             android:textSize="20sp"
+             />
+         
+          <Button 
+              android:id="@+id/btn_recharge"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="10dp"
+             android:layout_toRightOf="@+id/btn_tixian"
+             android:background="@drawable/jh_licai_recharge_selector"
+             android:text="充值"
+             android:layout_centerVertical="true"
+             android:textColor="@color/white"
+             android:textSize="20sp"
+             />
+         
+     </RelativeLayout>
+
+</RelativeLayout>

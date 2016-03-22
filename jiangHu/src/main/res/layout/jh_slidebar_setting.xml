@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color" >
+
+    <!-- 侧栏  设置 -->
+
+    <com.sptech.qujj.view.TitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+    </com.sptech.qujj.view.TitleBar>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleBar"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.6dp"
+            android:background="@color/gray_line" />
+
+        <RelativeLayout
+            android:id="@+id/rela_message"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/jh_item_colorchange_selector"
+            android:clickable="true"
+            android:paddingRight="5dp" >
+
+            <TextView
+                android:id="@+id/tv_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="消息提醒设置"
+                android:textColor="@color/text_main"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/image_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_bavalue"
+                android:background="@drawable/jh_rightbtn_selector" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.6dp"
+            android:background="@color/gray_line" />
+
+        <RelativeLayout
+            android:id="@+id/rela_tuisong"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/jh_item_colorchange_selector"
+            android:gravity="center_vertical"
+            android:paddingRight="10dp" >
+
+            <TextView
+                android:id="@+id/tv_tuisong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="消息推送设置"
+                android:textColor="@color/text_main"
+                android:textSize="16sp" />
+
+            <com.sptech.qujj.view.SlipButton
+                android:id="@+id/slipbtn_tuisong"
+                android:layout_width="60dp"
+                android:layout_height="32dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.6dp"
+            android:background="@color/gray_line" />
+        <!-- 智能收取账单 -->
+
+        <RelativeLayout
+            android:id="@+id/rela_bill"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/jh_item_colorchange_selector"
+            android:paddingRight="10dp" >
+
+            <TextView
+                android:id="@+id/tv_bill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="智能收取账单"
+                android:textColor="@color/text_main"
+                android:textSize="16sp" />
+
+            <com.sptech.qujj.view.SlipButton
+                android:id="@+id/slipbtn_zhangdan"
+                android:layout_width="60dp"
+                android:layout_height="32dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view_line"
+            android:layout_width="fill_parent"
+            android:layout_height="0.6dp"
+            android:background="@color/gray_line" />
+
+        <RelativeLayout
+            android:id="@+id/rela_net"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/jh_item_colorchange_selector"
+            android:paddingRight="10dp" >
+
+            <TextView
+                android:id="@+id/tv_net"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="2G/3G/4G网络提醒"
+                android:textColor="@color/text_main"
+                android:textSize="16sp" />
+
+            <com.sptech.qujj.view.SlipButton
+                android:id="@+id/slipbtn_net"
+                android:layout_width="60dp"
+                android:layout_height="32dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view_line_ss"
+            android:layout_width="fill_parent"
+            android:layout_height="0.6dp"
+            android:background="@color/gray_line" />
+
+        <View
+            android:id="@+id/view_line_two"
+            android:layout_width="fill_parent"
+            android:layout_height="0.6dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/gray_line" />
+
+        <!-- 新手引导页 -->
+
+        <RelativeLayout
+            android:id="@+id/rela_guide"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/jh_item_colorchange_selector"
+            android:clickable="true"
+            android:paddingRight="5dp" >
+
+            <TextView
+                android:id="@+id/tv_guide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="新手引导页"
+                android:textColor="@color/text_main"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/image_r"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="right"
+                android:layout_toRightOf="@+id/tv_bavalue"
+                android:background="@drawable/jh_rightbtn_selector" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.6dp"
+            android:background="@color/gray_line" />
+        <!-- 意见反馈 -->
+
+        <RelativeLayout
+            android:id="@+id/rela_feedback"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/jh_item_colorchange_selector"
+            android:clickable="true"
+            android:paddingRight="5dp" >
+
+            <TextView
+                android:id="@+id/tv_feedback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="意见反馈"
+                android:textColor="@color/text_main"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/image_ri"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="right"
+                android:layout_toRightOf="@+id/tv_bavalue"
+                android:background="@drawable/jh_rightbtn_selector" />
+        </RelativeLayout>
+
+        <!-- 检查更新 -->
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.6dp"
+            android:background="@color/gray_line" />
+
+        <RelativeLayout
+            android:id="@+id/rela_checkupdate"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/jh_item_colorchange_selector"
+            android:clickable="true"
+            android:paddingRight="5dp" >
+
+            <TextView
+                android:id="@+id/tv_checkupdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="检查更新"
+                android:textColor="@color/text_main"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="right"
+                android:layout_toLeftOf="@+id/image_update"
+                android:layout_toRightOf="@+id/tv_bavalue"
+                android:text="已是最新版本" />
+
+            <ImageView
+                android:id="@+id/image_update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="right"
+                android:background="@drawable/jh_rightbtn_selector" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.6dp"
+            android:background="@color/gray_line" />
+        <!-- 关于我们 -->
+
+        <RelativeLayout
+            android:id="@+id/rela_aboutus"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/jh_item_colorchange_selector"
+            android:clickable="true"
+            android:paddingRight="5dp" >
+
+            <TextView
+                android:id="@+id/tv_aboutus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="关于我们"
+                android:textColor="@color/text_main"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/image_rig"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="right"
+                android:layout_toRightOf="@+id/tv_bavalue"
+                android:background="@drawable/jh_rightbtn_selector" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.6dp"
+            android:background="@color/gray_line" />
+    </LinearLayout>
+
+</RelativeLayout>

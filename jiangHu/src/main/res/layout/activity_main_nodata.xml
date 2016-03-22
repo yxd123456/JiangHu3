@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rela_nodata"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <TextView 
+        android:layout_weight="50"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        />
+    
+    <include layout="@layout/include_ye_shouye"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="552"/>
+    
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_line"/>
+
+    <LinearLayout
+        android:id="@+id/btn_ll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="78"
+        android:background="#ffffff">
+
+        <Button
+            android:onClick="fill"
+            android:layout_gravity="center"
+            android:id="@+id/btn_renzheng"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/jh_licai_detailinfo_buy_selector"
+            android:padding="5dp"
+            android:text="完善资料"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</LinearLayout>

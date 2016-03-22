@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <com.sptech.qujj.view.TitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/titleBar"/>
+    
+    <TextView 
+        android:id="@+id/tv_blank"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@+id/titleBar"/>
+    
+    <TextView 
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_line"
+        android:layout_below="@+id/tv_blank"/>
+
+    <ListView
+        android:choiceMode="singleChoice"
+        android:id="@+id/lv_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:divider="@null"
+        android:fadingEdge="none"
+        android:listSelector="@android:color/transparent"
+        android:paddingBottom="20dp"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbars="none"
+        android:layout_marginBottom="60dp"
+        android:visibility="visible"
+        android:layout_below="@+id/line" />
+
+    <RelativeLayout
+        android:id="@+id/rl_nocard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/img_nocard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="120dp"
+            android:background="@drawable/img_bankcard_nocard" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_nocard"
+            android:layout_centerHorizontal="true"
+            android:text="暂无储蓄卡"
+            android:textColor="@color/text_assist" />
+    </RelativeLayout>
+
+    <TextView
+         android:id="@+id/tv_addcard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:drawableLeft="@drawable/btn_addmail_unselect"
+        android:drawablePadding="5dp"
+        android:gravity="center_vertical"
+        android:text="添加储蓄银行卡"
+        android:textColor="@color/text_blue"
+        android:textSize="18sp"  />
+
+</RelativeLayout>

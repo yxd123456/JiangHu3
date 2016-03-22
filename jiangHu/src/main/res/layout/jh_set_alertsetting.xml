@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color" >
+
+    <!-- 提醒设置 -->
+
+    <com.sptech.qujj.view.TitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+    </com.sptech.qujj.view.TitleBar>
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleBar"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.6dp"
+            android:background="@color/gray_line" />
+
+        <RelativeLayout
+            android:id="@+id/rela_huanset"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/jh_item_colorchange_selector"
+            android:clickable="true"
+            android:paddingRight="5dp" >
+
+            <TextView
+                android:id="@+id/tv_huanset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="还款设置"
+                android:textColor="@color/text_main"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" >
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="提前5天 08:30"
+                    android:textColor="@color/text_assist"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/image_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tv_time"
+                    android:background="@drawable/jh_rightbtn_selector" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.6dp"
+            android:background="@color/gray_line" />
+
+        <RelativeLayout
+            android:id="@+id/rela_outtime"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/jh_item_colorchange_selector"
+            android:clickable="true"
+            android:paddingRight="5dp" >
+
+            <TextView
+                android:id="@+id/tv_outtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="逾期设置"
+                android:textColor="@color/text_main"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" >
+
+                <TextView
+                    android:id="@+id/tv_outtimeset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="提前3天 08:30"
+                    android:textColor="@color/text_assist"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/image_right_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tv_outtimeset"
+                    android:background="@drawable/jh_rightbtn_selector" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.6dp"
+            android:background="@color/gray_line" />
+
+        <View
+            android:id="@+id/view_line_two"
+            android:layout_width="fill_parent"
+            android:layout_height="0.6dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/gray_line" />
+
+        <!-- 代还款 -->
+
+        <RelativeLayout
+            android:id="@+id/rela_repay"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/jh_item_colorchange_selector"
+            android:clickable="true"
+            android:paddingRight="5dp" >
+
+            <TextView
+                android:id="@+id/tv_repay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="代还款设置"
+                android:textColor="@color/text_main"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" >
+
+                <TextView
+                    android:id="@+id/tv_repaytime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="提前4天 17:00"
+                    android:textColor="@color/text_assist"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/image_right_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tv_repaytime"
+                    android:background="@drawable/jh_rightbtn_selector" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.6dp"
+            android:background="@color/gray_line" />
+    </LinearLayout>
+
+</RelativeLayout>

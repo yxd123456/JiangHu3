@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color" >
+
+    <!-- 导入账单邮箱 -->
+
+    <com.sptech.qujj.view.TitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+    </com.sptech.qujj.view.TitleBar>
+
+    <LinearLayout
+        android:id="@+id/linear_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleBar"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:text="授权绑定邮箱，一键获取银行账单"
+            android:textColor="@color/text_assist"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.6dp"
+            android:background="@color/gray_line" />
+
+        <RelativeLayout
+            android:id="@+id/rela_mail"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="15dp" >
+
+            <TextView
+                android:id="@+id/tv_touzijine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="账单邮箱"
+                android:textColor="@color/text_main"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_mailname"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/tv_touzijine"
+                android:background="@null"
+                android:hint="邮箱账号"
+                android:singleLine="true"
+                android:textColorHint="@color/text_hint"
+                android:textCursorDrawable="@drawable/edittext_cursor_color"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/img_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:adjustViewBounds="true"
+                android:maxHeight="27dp"
+                android:maxWidth="27dp"
+                android:src="@drawable/jh_input_clear_selector"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.6dp"
+            android:background="@color/gray_line" />
+
+        <RelativeLayout
+            android:id="@+id/rela_pwd"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="15dp" >
+
+            <TextView
+                android:id="@+id/tv_mailpwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="邮箱密码"
+                android:textColor="@color/text_main"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_mailpwd"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/tv_mailpwd"
+                android:background="@null"
+                android:hint="邮箱密码(个别邮箱需填授权密码)"
+                android:password="true"
+                android:singleLine="true"
+                android:textColorHint="@color/text_hint"
+                android:textCursorDrawable="@drawable/edittext_cursor_color"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/img_clear_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:adjustViewBounds="true"
+                android:maxHeight="27dp"
+                android:maxWidth="27dp"
+                android:src="@drawable/jh_input_clear_selector"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.6dp"
+            android:background="@color/gray_line" />
+
+        <RelativeLayout
+            android:id="@+id/rela_pwdbei"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp" >
+
+            <TextView
+                android:id="@+id/tv_passbei"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="QQ邮箱,网易邮箱使用授权密码登录"
+                android:textColor="@color/text_red"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_passlog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_passbei"
+                android:text=" --> 获取方法"
+                android:textColor="@color/text_blue"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rela_open"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical" >
+
+            <CheckBox
+                android:id="@+id/cb_open"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/jh_recharge_agree_selector"
+                android:button="@null"
+                android:checked="true" />
+
+            <TextView
+                android:id="@+id/tv_open"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/cb_open"
+                android:text="我已经阅读并同意 "
+                android:textColor="@color/text_main"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_agreeopen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_open"
+                android:text="《账单邮箱服务协议》"
+                android:textColor="@color/text_blue"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rela_agree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_shengyu"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical" >
+
+            <CheckBox
+                android:id="@+id/cb_agree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/jh_recharge_agree_selector"
+                android:button="@null"
+                android:checked="true" />
+
+            <TextView
+                android:id="@+id/tv_agree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/cb_agree"
+                android:text="开通自动导入新账单功能 "
+                android:textColor="@color/text_main"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_zhuyi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear_content"
+        android:layout_margin="20dp"
+        android:text="注：网易邮箱，QQ邮箱密码请先开启POP3服务获取授权密码登录 \n \n操作说明：电脑登录邮箱-设置-开启POP3服务-获取授权密码  完成（填写授权密码导账单）"
+        android:textColor="@color/text_assist" />
+
+    <Button
+        android:id="@+id/btn_done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_zhuyi"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/jh_licai_detailinfo_buy_selector"
+        android:text="完成"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp" >
+
+        <TextView
+            android:id="@+id/tv_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="如有疑问请拨打客服电话"
+            android:textColor="@color/text_assist"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_telphone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_hint"
+            android:layout_centerHorizontal="true"
+            android:text="400-889-4997"
+            android:textColor="@color/text_blue"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

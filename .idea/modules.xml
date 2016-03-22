@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/JiangHu3.iml" filepath="$PROJECT_DIR$/JiangHu3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/afinalmaster/afinalmaster.iml" filepath="$PROJECT_DIR$/afinalmaster/afinalmaster.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jiangHu/jiangHu.iml" filepath="$PROJECT_DIR$/jiangHu/jiangHu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/slidelibrary/slidelibrary.iml" filepath="$PROJECT_DIR$/slidelibrary/slidelibrary.iml" />
+    </modules>
+  </component>
+</project>

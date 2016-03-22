@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.sptech.qujj"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color" >
+
+    <!-- 用户信息验证 -->
+
+    <com.sptech.qujj.view.TitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+    </com.sptech.qujj.view.TitleBar>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleBar" >
+
+        <!-- 提示文字 -->
+
+        <RelativeLayout
+            android:id="@+id/rela_warning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp" >
+
+            <ImageView
+                android:id="@+id/img_warning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/jh_licai_warnig" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="6dp"
+                android:layout_toRightOf="@+id/img_warning"
+                android:text="手动申请信用卡代还款提交后，工作人员会于2个工作日内于您联系。（暂支持中小银行的申请，各大银行请走账单抓取申请流程）"
+                android:textColor="@color/text_warning"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.6dp"
+            android:background="@color/gray_1" />
+
+        <RelativeLayout
+            android:id="@+id/rl_apply"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/rela_warning"
+            android:layout_centerVertical="true"
+            android:background="@drawable/jh_bottom_line_white"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <TextView
+                android:id="@+id/tv_appply"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="right"
+                android:text="申请额度"
+                android:textColor="@color/text_main"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_applynum"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/tv_appply"
+                android:background="@null"
+                android:hint="最低1000元,最高10000元"
+                android:inputType="numberDecimal"
+                android:maxLength="10"
+                android:singleLine="true"
+                android:textCursorDrawable="@drawable/edittext_cursor_color"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/img_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:adjustViewBounds="true"
+                android:maxHeight="27dp"
+                android:maxWidth="27dp"
+                android:src="@drawable/jh_input_clear_selector"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textview1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_apply"
+            android:padding="10dp"
+            android:text="为了保障申请的成功率，额度最高不要超过本期信用卡应还金额(申请周期默认30天)。"
+            android:textColor="@color/text_assist" />
+
+        <RelativeLayout
+            android:id="@+id/rl_usedata"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/textview1"
+            android:layout_centerVertical="true"
+            android:background="@drawable/jh_bottom_line_white"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <TextView
+                android:id="@+id/tv_usedata"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="right"
+                android:text="申请周期"
+                android:textColor="@color/text_main"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_usedata"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/tv_usedata"
+                android:background="@null"
+                android:enabled="false"
+                android:hint="请输入申请周期（天）"
+                android:inputType="number"
+                android:singleLine="true"
+                android:text="30天"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_handmoney"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_usedata"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:text=""
+            android:textColor="@color/text_assist" />
+
+        <TextView
+            android:id="@+id/tv_repaydate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_handmoney"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text=""
+            android:textColor="@color/text_assist" />
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_repaydate"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/jh_licai_detailinfo_buy_selector"
+            android:text="下一步"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp" >
+
+        <TextView
+            android:id="@+id/tv_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="如有疑问请拨打客服电话"
+            android:textColor="@color/text_assist"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_tellnum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_hint"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="15dp"
+            android:text="400-889-4997"
+            android:textColor="@color/text_blue"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

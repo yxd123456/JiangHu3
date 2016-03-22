@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.sptech.qujj"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/slide_bg"
+    android:orientation="vertical" >
+
+    <!-- 侧边栏 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:id="@+id/rela_userinfo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/jh_item_leftmenu_colorchange_selector"
+            android:clickable="true"
+            android:paddingLeft="30dp" >
+
+            <com.sptech.qujj.view.CircleImageView
+                android:id="@+id/user_image"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="30dp"
+                app:circle_border_color="@color/gray_line"
+                app:circle_border_width="1dp" />
+
+            <LinearLayout
+                android:id="@+id/linear_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/user_image"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tv_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!-- 邮箱 银行卡 -->
+
+        <RelativeLayout
+            android:id="@+id/rela_mailcard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rela_userinfo"
+            android:layout_centerHorizontal="true" >
+
+            <LinearLayout
+                android:id="@+id/linear_mail"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:id="@+id/rela_mail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/jh_item_leftmenu_colorchange_selector"
+                    android:paddingBottom="15dp"
+                    android:paddingTop="15dp" >
+
+                    <Button
+                        android:id="@+id/btn_mail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/btn_sidebar_mail_unselect"
+                        android:clickable="false" />
+
+                    <TextView
+                        android:id="@+id/tv_emailnum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/btn_mail"
+                        android:layout_centerHorizontal="true"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/img_line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/im_line_grey" />
+
+                <RelativeLayout
+                    android:id="@+id/rela_card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/jh_item_leftmenu_colorchange_selector"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="15dp"
+                    android:paddingTop="15dp" >
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true" >
+
+                        <Button
+                            android:id="@+id/btn_card"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/btn_sidebar_card_unselect"
+                            android:clickable="false" />
+
+                        <TextView
+                            android:id="@+id/tv_bankcardnum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/btn_card"
+                            android:layout_centerHorizontal="true"
+                            android:text=""
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/linear_mail"
+                android:background="#424752" />
+        </RelativeLayout>
+
+        <!-- 六个选项 -->
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rela_mailcard"
+            android:scrollbars="none" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <RelativeLayout
+                    android:id="@+id/rela_six"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center" >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center" >
+"
+
+                        <LinearLayout
+                            android:id="@+id/linear_one"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal" >
+
+                            <RelativeLayout
+                                android:id="@+id/rela_licai"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/jh_item_leftmenu_colorchange_selector"
+                                android:paddingBottom="30dp"
+                                android:paddingTop="30dp" >
+
+                                <Button
+                                    android:id="@+id/btn_licai"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:background="@drawable/btn_sidebar_licai_unselect"
+                                    android:clickable="false" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/btn_licai"
+                                    android:layout_centerHorizontal="true"
+                                    android:text="我要理财"
+                                    android:textColor="@color/text_slide"
+                                    android:textSize="16sp" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rela_borrow"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/jh_item_leftmenu_colorchange_selector"
+                                android:paddingBottom="30dp"
+                                android:paddingTop="30dp" >
+
+                                <Button
+                                    android:id="@+id/btn_borrow"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:background="@drawable/btn_sidebar_borrow_unselect"
+                                    android:clickable="false" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/btn_borrow"
+                                    android:layout_centerHorizontal="true"
+                                    android:text="我的借款"
+                                    android:textColor="@color/text_slide"
+                                    android:textSize="16sp" />
+                                <!-- </RelativeLayout> -->
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/img_one_heng"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/linear_one"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/img_line_heng" />
+
+                        <LinearLayout
+                            android:id="@+id/linear_two"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/img_one_heng"
+                            android:orientation="horizontal" >
+
+                            <RelativeLayout
+                                android:id="@+id/rela_progress"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/jh_item_leftmenu_colorchange_selector"
+                                android:paddingBottom="30dp"
+                                android:paddingTop="30dp" >
+
+                                <Button
+                                    android:id="@+id/btn_progress"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:background="@drawable/btn_sidebar_progress_unselect"
+                                    android:clickable="false" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/btn_progress"
+                                    android:layout_centerHorizontal="true"
+                                    android:text="进度中心"
+                                    android:textColor="@color/text_slide"
+                                    android:textSize="16sp" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rela_activity"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/jh_item_leftmenu_colorchange_selector"
+                                android:paddingBottom="30dp"
+                                android:paddingTop="30dp" >
+
+                                <Button
+                                    android:id="@+id/btn_activity"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:background="@drawable/btn_sidebar_activity_unselect"
+                                    android:clickable="false" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/btn_activity"
+                                    android:layout_centerHorizontal="true"
+                                    android:text="活动中心"
+                                    android:textColor="@color/text_slide"
+                                    android:textSize="16sp" />
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/img_two_heng"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/linear_two"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/img_line_heng" />
+
+                        <LinearLayout
+                            android:id="@+id/linear_three"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/img_two_heng"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal" >
+
+                            <RelativeLayout
+                                android:id="@+id/rela_service"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/jh_item_leftmenu_colorchange_selector"
+                                android:paddingBottom="30dp"
+                                android:paddingTop="30dp" >
+
+                                <Button
+                                    android:id="@+id/btn_service"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:background="@drawable/btn_sidebar_service_unselect"
+                                    android:clickable="false" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/btn_service"
+                                    android:layout_centerHorizontal="true"
+                                    android:text="服务中心"
+                                    android:textColor="@color/text_slide"
+                                    android:textSize="16sp" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rela_setting"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/jh_item_leftmenu_colorchange_selector"
+                                android:paddingBottom="30dp"
+                                android:paddingTop="30dp" >
+
+                                <Button
+                                    android:id="@+id/btn_setting"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:background="@drawable/btn_sidebar_setup_unselect"
+                                    android:clickable="false" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/btn_setting"
+                                    android:layout_centerHorizontal="true"
+                                    android:text="设置"
+                                    android:textColor="@color/text_slide"
+                                    android:textSize="16sp" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/img_line_shu" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center_horizontal"
+                     >
+
+                    <TextView
+                        android:id="@+id/tv_tell"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="客服电话 : "
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_tellnum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/tv_tell"
+                        android:text="400-889-4997"
+                        android:textColor="@color/text_blue"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_worktime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:layout_below="@+id/tv_tell"
+                        android:text="（工作时间 9:00 至 17:00）"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+    <!-- </ScrollView> -->
+
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- 理财项目详情 顶部的line -->
+    
+    <!-- 边框颜色 -->
+    <item>
+        <shape>
+            <solid android:color="#d24431" />
+        </shape>
+    </item>
+    <!-- 主体背景颜色值 -->
+    <item android:top="0.6dp">
+        <shape>
+            <solid android:color="#e14825" />
+        </shape>
+    </item>
+
+</layer-list>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <CheckBox
+        android:id="@+id/btn_select_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:background="@drawable/btn_bankcard_unselect"
+        android:button="@null" 
+        android:onClick="gou"/>
+
+    <RelativeLayout
+        android:id="@+id/ll_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp" >
+
+        <TextView
+            android:id="@+id/loadyoumoney_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_main"
+            android:text="借你钱借款成功" />
+
+        <TextView
+            android:id="@+id/lym_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/text_assist"
+            android:drawableRight="@drawable/btn_right_click_selected"
+            android:gravity="center_vertical"
+            android:text="05-06 " />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/loadyoumoney_item"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_borrow_sucess"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_main"
+                android:text="11200.00" />
+
+            <TextView
+                android:id="@+id/tv_borrow_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/loadyoumoney_item"
+                android:text="11200.00"
+                android:textColor="@color/text_assist" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

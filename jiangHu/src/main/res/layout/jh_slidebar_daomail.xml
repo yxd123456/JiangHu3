@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color" >
+
+    <!-- 导入邮箱 -->
+
+    <com.sptech.qujj.view.TitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+    </com.sptech.qujj.view.TitleBar>
+
+    <!-- 验证邮箱中。。 -->
+   <RelativeLayout
+        android:id="@+id/rale_checkmail"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/titleBar"
+        android:visibility="gone" >
+
+       <com.ant.liao.GifView
+        android:id="@+id/gif_checkview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:enabled="false" />
+
+        <TextView
+            android:id="@+id/tv_success"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/gif_checkview"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="70dp"
+            android:text="邮箱登录中，请稍候....."
+            android:textColor="@color/text_blue"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+
+<!-- 导入账单中  -->
+    <RelativeLayout
+        android:id="@+id/rale_success"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/titleBar"
+        android:visibility="gone" >
+
+       <com.ant.liao.GifView
+        android:id="@+id/gif_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:enabled="false" />
+
+        <TextView
+            android:id="@+id/tv_successs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/gif_view"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="70dp"
+            android:text="正在更新账单数据..."
+            android:textColor="@color/text_blue"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_mail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_successs"
+            android:layout_centerHorizontal="true"
+            android:text="当前邮箱: 1415337912@qq.com"
+            android:textColor="@color/text_assist"
+            android:textSize="14sp" />
+       
+    </RelativeLayout>
+
+    <!-- 没有账单数据 -->
+    <RelativeLayout
+        android:id="@+id/rale_nodata"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/titleBar"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/img_nodata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/img_mail_nodata" />
+
+        <TextView
+            android:id="@+id/tv_nodata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_nodata"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:text="没有账单数据"
+            android:textColor="@color/text_main"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_nodatahint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_nodata"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="没有账单数据，换个邮箱试试~ "
+            android:textColor="@color/text_assist"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btn_changemail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_nodatahint"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/jh_home_repaymentfall_selector"
+            android:text="换个邮箱"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+         <TextView
+            android:id="@+id/tv_huozheshishi1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_changemail"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="或者"
+            android:textColor="@color/text_assist"
+            android:textSize="14sp" />
+        <View android:layout_width="match_parent"
+             android:layout_height="0.6dp"
+             android:background="@color/gray_1"
+             android:layout_marginTop="10dp"
+             android:layout_marginLeft="30dp"
+             android:layout_alignTop="@id/tv_huozheshishi1"
+             android:layout_toLeftOf="@id/tv_huozheshishi1"
+            />
+        <View android:layout_width="match_parent"
+             android:layout_height="0.6dp"
+             android:background="@color/gray_1"
+             android:layout_marginTop="10dp"
+             android:layout_marginRight="30dp"
+             android:layout_alignTop="@id/tv_huozheshishi1"
+             android:layout_toRightOf="@id/tv_huozheshishi1"
+            />
+        <Button
+            android:id="@+id/btn_handapply1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_huozheshishi1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/btn_repaymentline_unselect"
+            android:text="返回首页"
+            android:textColor="@color/main_color"
+            android:textSize="20sp" />
+    </RelativeLayout>
+    
+    <!-- 导入失败 -->
+    <RelativeLayout
+        android:id="@+id/rale_failed"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/titleBar"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/img_fail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/img_mail_failure" />
+
+        <TextView
+            android:id="@+id/tv_fail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_fail"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:text="导入失败"
+            android:textColor="@color/text_main"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_failhint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_fail"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="账号或者密码错误，请检查后重新导入 "
+            android:textColor="@color/text_assist"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btn_agin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_failhint"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/jh_home_repaymentfall_selector"
+            android:text="重新导入"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/tv_huozheshishi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_agin"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="或者"
+            android:textColor="@color/text_assist"
+            android:textSize="14sp" />
+        <View android:layout_width="match_parent"
+             android:layout_height="0.6dp"
+             android:background="@color/gray_1"
+             android:layout_marginTop="10dp"
+             android:layout_marginLeft="30dp"
+             android:layout_alignTop="@id/tv_huozheshishi"
+             android:layout_toLeftOf="@id/tv_huozheshishi"
+            />
+        <View android:layout_width="match_parent"
+             android:layout_height="0.6dp"
+             android:background="@color/gray_1"
+             android:layout_marginTop="10dp"
+             android:layout_marginRight="30dp"
+             android:layout_alignTop="@id/tv_huozheshishi"
+             android:layout_toRightOf="@id/tv_huozheshishi"
+            />
+        <Button
+            android:id="@+id/btn_handapply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_huozheshishi"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/btn_repaymentline_unselect"
+            android:text="返回首页"
+            android:textColor="@color/main_color"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <!-- 网络问题 -->
+
+    <RelativeLayout
+        android:id="@+id/rale_nonetwork"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/titleBar"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/img_nonetwork"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/img_nonetwork" />
+
+        <TextView
+            android:id="@+id/tv_nonetwork"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_nonetwork"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:text="数据加载出错"
+            android:textColor="@color/text_main"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_nonetworkhint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_nonetwork"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="当前网络较差，请检查网络设置"
+            android:textColor="@color/text_assist"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btn_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_nonetworkhint"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/jh_home_repaymentfall_selector"
+            android:text="重新加载"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

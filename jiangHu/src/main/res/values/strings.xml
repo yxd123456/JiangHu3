@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">趣救急</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="description">background image</string>
+    <string name="general_error">获取数据出现异常，请稍后再试</string>
+    <string name="general_server_down">网络不给力，请求超时</string>
+    <string name="general_no_internet">网络故障，连接服务器异常，请检查你的网络</string>
+    <string name="title_activity_ke_fu">KeFuActivity</string>
+    <string name="title_activity_delete">DeleteActivity</string>
+    <string name="title_activity_txl">TXLActivity</string>
+    <string name="title_activity_contacts">ContactsActivity</string>
+    <string name="title_activity_complete_info">CompleteInfoActivity</string>
+    <string name="title_activity_com_info">ComInfoActivity</string>
+    <string name="title_activity_ge_ren_xin_yong">GeRenXinYongActivity</string>
+    <string name="title_activity_sqcgts">SQCGTSActivity</string>
+    <string name="title_activity_replenish_credit_card_detail">ReplenishCreditCardDetailActivity</string>
+    <string name="title_activity_select_blue_card">SelectBlueCardActivity</string>
+    <string name="title_activity_select_bank_bard">SelectBankBardActivity</string>
+    <string name="title_activity_test">TestActivity</string>
+
+</resources>

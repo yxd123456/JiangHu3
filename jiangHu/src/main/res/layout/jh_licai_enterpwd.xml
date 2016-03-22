@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color" >
+
+    <!-- 输入交易密码 -->
+
+    <com.sptech.qujj.view.TitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+    </com.sptech.qujj.view.TitleBar>
+
+    <RelativeLayout
+        android:id="@+id/rela_enter"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleBar"
+        android:layout_marginTop="10dp" >
+
+        <RelativeLayout
+            android:id="@+id/rela_enterpwd"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/jh_topbottom_line_white"
+            android:gravity="center_vertical"
+            android:paddingRight="10dp" >
+
+            <ImageView
+                android:id="@+id/img_suo"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/jh_licai_enterpwd" />
+
+            <EditText
+                android:id="@+id/ed_pwd"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/img_suo"
+                android:background="@color/white"
+                android:hint="输入交易密码"
+                android:password="true"
+                android:singleLine="true"
+                android:textColorHint="@color/text_hint"
+                android:textCursorDrawable="@drawable/edittext_cursor_color" />
+
+            <ImageView
+                android:id="@+id/img_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:adjustViewBounds="true"
+                android:maxHeight="27dp"
+                android:maxWidth="27dp"
+                android:src="@drawable/jh_input_clear_selector"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rela_enterpwd"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp" >
+
+            <TextView
+                android:id="@+id/tv_forgetpwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="忘记交易密码"
+                android:textColor="@color/main_color"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_finish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_forgetpwd"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/jh_licai_detailinfo_buy_selector"
+                android:text="完成"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!-- 申请成功页面 -->
+
+    <RelativeLayout
+        android:id="@+id/rale_applysuccess"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/titleBar"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/img_success"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/img_repayment_success" />
+
+        <TextView
+            android:id="@+id/tv_success"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_success"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:text="申请成功"
+            android:textColor="@color/text_main"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_success"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="我们会尽快为您完成审核"
+            android:textColor="@color/text_assist"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_miao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_hint"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:text="秒后回到首页"
+            android:textColor="@color/main_color"
+            android:textSize="16sp" />
+    </RelativeLayout>
+    <!-- 申请失败页面 -->
+
+    <RelativeLayout
+        android:id="@+id/rale_nonetwork"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/titleBar"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/img_nonetwork"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/img_nonetwork" />
+
+        <TextView
+            android:id="@+id/tv_nonetwork"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_nonetwork"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:text="数据加载出错"
+            android:textColor="@color/text_main"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_nonetworkhint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_nonetwork"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="当前网络较差，请检查网络设置"
+            android:textColor="@color/text_assist"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_nonetworkhint"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/jh_home_repaymentfall_selector"
+            android:text="重新加载"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- 推荐产品下的列表 -->
+<!--
+         <com.sptech.qujj.view.MyFMListView
+         android:id="@+id/lv_view"
+         android:layout_width="fill_parent"   
+         android:layout_height="wrap_content"
+         android:listSelector="@android:color/transparent" 
+         android:clipToPadding="false"
+         android:paddingBottom="20dp"
+         android:dividerHeight="10dp"
+         android:divider="@null" 
+         android:scrollbars="none"
+         android:fadingEdge="none"
+         android:scrollbarStyle="outsideOverlay" />
+
+    -->
+
+    
+    <!-- 轮播图 -->
+
+    <RelativeLayout
+        android:id="@+id/relativead"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/banner_height"
+        android:paddingBottom="5dp"
+        android:visibility="gone" >
+
+        <com.sptech.qujj.view.MyAdGallery
+            android:id="@+id/galleryad"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/banner_height" />
+
+        <LinearLayout
+            android:id="@+id/adiconlinear"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="horizontal" />
+    </RelativeLayout>
+
+    <!-- <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relativead" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <com.handmark.pulltorefresh.library.PullToRefreshListView
+                android:id="@+id/lv_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+               
+                android:cacheColorHint="#00000000"
+                android:divider="@null"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:listSelector="#00000000"
+                android:scrollbars="none"
+                android:visibility="visible" />
+
+            <com.sptech.qujj.view.NoScrollListView
+                android:id="@+id/lv_view2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/lv_view"
+                android:cacheColorHint="#00000000"
+                android:divider="@null"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:listSelector="#00000000"
+                android:scrollbars="none"
+                android:visibility="visible" />
+        </RelativeLayout>
+    </ScrollView>
+ -->
+   
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/lv_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relativead"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:listSelector="#00000000"
+        android:scrollbars="none"
+        android:visibility="visible" />
+     <!--
+    <com.sptech.qujj.view.NoScrollListView
+        android:id="@+id/lv_view2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/lv_view"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:listSelector="#00000000"
+        android:scrollbars="none"
+        android:visibility="visible" />
+    -->
+
+</RelativeLayout>

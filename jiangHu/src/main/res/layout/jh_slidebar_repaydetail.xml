@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color" >
+
+    <!-- 还款明细记录 -->
+
+    <com.sptech.qujj.view.TitleBar
+        android:id="@+id/titleBar" 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+    </com.sptech.qujj.view.TitleBar>
+    
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_below="@+id/titleBar"
+        android:layout_marginTop="10dp"
+        android:background="@color/gray_line" />
+
+    <ListView
+        android:id="@+id/listView_recharge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_line"
+        android:layout_centerVertical="true"
+        android:divider="@null" >
+    </ListView>
+    
+     <RelativeLayout
+        android:id="@+id/rela_nodata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_line"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/img_nocard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/img_licai_blankpage_record" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_nocard"
+            android:layout_centerHorizontal="true"
+            android:text="暂无还款记录"
+            android:textColor="@color/text_assist" />
+    </RelativeLayout>
+
+</RelativeLayout>

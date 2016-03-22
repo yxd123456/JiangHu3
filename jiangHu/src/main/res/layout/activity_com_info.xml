@@ -1,0 +1,73 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+     <com.sptech.qujj.view.TitleBar
+        android:id="@+id/infoTitleBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+    </com.sptech.qujj.view.TitleBar>
+    
+ 			
+     		<TextView 
+     		    android:layout_width="match_parent"
+     		    android:layout_height="0dp"
+     		    android:layout_weight="77"/>
+     
+	 	   <android.support.v4.view.ViewPager
+	         android:id="@+id/viewpager_com_info"
+	         android:layout_width="match_parent"
+	         android:layout_height="0dp"
+	         android:layout_weight="820"/>
+	     
+	     	<LinearLayout 
+	     	    android:layout_width="match_parent"
+	     	    android:layout_height="0dp"
+	     	    android:layout_weight="155"
+	     		android:gravity="center"
+	     	    >
+	     
+			 	<ImageView 
+			 	    android:id="@+id/indicator1"
+			 	    android:layout_width="wrap_content"
+			 	    android:layout_height="wrap_content"
+			 	    android:src="@drawable/indicator_pointer_fg"/>
+			 	
+			 	<ImageView 
+			 	    android:id="@+id/indicator2"
+			 	    android:layout_width="wrap_content"
+			 	    android:layout_height="wrap_content"
+			 	    android:src="@drawable/indicator_pointer_grey"
+			 	    android:layout_marginLeft="10dp"/>
+			 	
+			 	
+		 	
+		 	</LinearLayout>
+ 	
+
+        
+
+</LinearLayout>
+
+<!-- <ImageView 
+			 	    android:id="@+id/indicator3"
+			 	    android:layout_width="wrap_content"
+			 	    android:layout_height="wrap_content"
+			 	    android:src="@drawable/indicator_pointer_grey"
+			 	    android:layout_marginLeft="10dp"/>
+			 	
+			 	<ImageView 
+			 	    android:id="@+id/indicator4"
+			 	    android:layout_width="wrap_content"
+			 	    android:layout_height="wrap_content"
+			 	    android:src="@drawable/indicator_pointer_grey"
+			 	    android:layout_marginLeft="10dp"/>
+			 	
+			 	<ImageView 
+			 	    android:id="@+id/indicator5"
+			 	    android:layout_width="wrap_content"
+			 	    android:layout_height="wrap_content"
+			 	    android:src="@drawable/indicator_pointer_grey"
+			 	    android:layout_marginLeft="10dp"/> -->

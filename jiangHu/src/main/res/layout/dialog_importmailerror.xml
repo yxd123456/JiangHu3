@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="360dp"
+            android:layout_centerInParent="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/bg_shape"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/linear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp" >
+
+                <TextView
+                    android:id="@+id/dialog_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:text="导入邮箱出错"
+                    android:textColor="@color/main_color"
+                    android:textSize="20dp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/dialog_line"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/linear"
+                android:layout_margin="10dp"
+                android:background="@color/gray_1" />
+
+            <TextView
+                android:id="@+id/tv_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dialog_line"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="请手动输入"
+                android:textColor="@color/text_hint"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/tv_mailtype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_hint"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:text="邮箱类型：POP3"
+                android:textColor="@color/text_main"
+                android:textSize="15dp" />
+
+            <View
+                android:id="@+id/dialog_line2"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/tv_mailtype"
+                android:layout_margin="10dp"
+                android:background="@color/gray_1" />
+
+            <TextView
+                android:id="@+id/tv_mailno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dialog_line2"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"  
+                android:textColor="@color/text_main"
+                android:textSize="15dp" />
+
+            <View
+                android:id="@+id/dialog_line3"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/tv_mailno"
+                android:layout_margin="10dp"
+                android:background="@color/gray_1" />
+
+            <TextView
+                android:id="@+id/tv_popserver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dialog_line3"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:text="收件服务器："
+                android:textColor="@color/text_main"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/et_popserver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/tv_popserver"
+                android:layout_toRightOf="@id/tv_popserver"
+                android:background="@null"
+                android:hint="如POP@邮箱后缀"
+                android:singleLine="true"
+                android:textCursorDrawable="@drawable/edittext_cursor_color"
+                android:textSize="15sp" />
+
+            <View
+                android:id="@+id/dialog_line4"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/tv_popserver"
+                android:layout_margin="10dp"
+                android:background="@color/gray_1" />
+
+            <TextView
+                android:id="@+id/tv_port"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dialog_line4"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="5dp"
+                android:text="端口："
+                android:textColor="@color/text_main"
+                android:textSize="15dp" />
+
+            <EditText
+                android:id="@+id/et_port"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/tv_port"
+                android:layout_toRightOf="@id/tv_port"
+                android:background="@null"
+                android:hint="110"
+                android:singleLine="true"
+                android:textCursorDrawable="@drawable/edittext_cursor_color"
+                android:textSize="15sp" />
+
+            <View
+                android:id="@+id/dialog_line5"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/tv_port"
+                android:layout_margin="10dp"
+                android:background="@color/gray_1" />
+
+            <CheckBox
+                android:id="@+id/img_agree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dialog_line5"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/jh_recharge_agree_selector" 
+                android:button="@null"
+                android:checked="false" />
+
+            <Button
+                android:id="@+id/dialog_im_right"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_below="@id/dialog_line5"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="42dp"
+                android:background="@drawable/licai_recharge_unselect"
+                android:text="确定"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/img_agree"
+                android:layout_alignBaseline="@+id/img_agree"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="7dp"
+                android:layout_toRightOf="@+id/img_agree"
+                android:text="SSL"
+                android:textColor="@color/text_blue" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textView1"
+                android:layout_alignBottom="@+id/textView1"
+                android:layout_toRightOf="@+id/textView1"
+                android:textColor="@color/text_main"
+                android:text="安全连接" />
+
+            <ImageView
+                android:id="@+id/im_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="6dp"
+                android:background="@drawable/btn_popup_close_unselect" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
